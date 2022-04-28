@@ -37,6 +37,7 @@ zoomIn.addEventListener('click', function() {
         currentScale += 0.1;
     }
     map.style.transform = `scale(${currentScale})`;
+    map.style.transformOrigin = "top left";
 });
 
 zoomOut.addEventListener('click', function() {
@@ -44,11 +45,13 @@ zoomOut.addEventListener('click', function() {
         currentScale -= 0.1;
     }
     map.style.transform = `scale(${currentScale})`;
+    map.style.transformOrigin = "center";
 });
 
 zoomReset.addEventListener('click', function () {
     currentScale = 1.0;
     map.style.transform = `scale(${initialScale})`;
+    map.style.transformOrigin = "center";
 });
 
 /*document.body.addEventListener('keydown', function (e) {
